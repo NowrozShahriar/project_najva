@@ -15,8 +15,8 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
-        'background-primary': 'var(--color-background-primary)',
-        'background-secondary': 'var(--color-background-secondary)',
+        'bg-primary': 'var(--color-bg-primary)',
+        'bg-secondary': 'var(--color-bg-secondary)',
 
         'text-primary': 'var(--color-text-primary)',
         'text-secondary': 'var(--color-text-secondary)'
