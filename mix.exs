@@ -55,7 +55,8 @@ defmodule ProjectNajva.MixProject do
       {:jason, "~> 1.4"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.6"},
-      {:xmpp, "~> 1.10"}
+      {:xmpp, "~> 1.10"},
+      {:tidewave, "~> 0.1", only: :dev}
     ]
   end
 

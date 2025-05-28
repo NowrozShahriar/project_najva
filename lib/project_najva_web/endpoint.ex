@@ -25,6 +25,11 @@ defmodule ProjectNajvaWeb.Endpoint do
     gzip: false,
     only: ProjectNajvaWeb.static_paths()
 
+  # Enable Tidewave if the module is available
+  if Code.ensure_loaded?(Tidewave) do
+    plug Tidewave
+  end
+
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
