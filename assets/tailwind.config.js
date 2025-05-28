@@ -17,7 +17,7 @@ module.exports = {
         brand: "#FD4F00",
         'bg-primary': 'var(--color-bg-primary)',
         'bg-secondary': 'var(--color-bg-secondary)',
-
+        'fg-primary': 'var(--color-fg-primary)',
         'text-primary': 'var(--color-text-primary)',
         'text-secondary': 'var(--color-text-secondary)'
       }
