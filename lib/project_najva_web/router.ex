@@ -17,6 +17,8 @@ defmodule ProjectNajvaWeb.Router do
   scope "/", ProjectNajvaWeb do
     pipe_through :browser
 
+    get "/login", LoginController, :login
+    post "/login", LoginController, :add_user
     get "/", PageController, :home
   end
 
