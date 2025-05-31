@@ -1,18 +1,7 @@
-# ProjectNajva
+# Project Najva
 
-To start your Phoenix server:
+The project aims to become the go to web client for XMPP, and spread light of security and freedom by making xmpp more accessible and actually usable in everyday life.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+The project will remain open source and the hope is that the fellow comrade xmpp providers will also host this client alongside the numerous free servers or maybe paid ones🤷‍♂️.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+All this until the direly needed job takes the dev guy away, then... who knows.... maybe something miraculous will happen and the project will survive to live on a long fulfilling life... Or may dear Najva rest in peace🪦
