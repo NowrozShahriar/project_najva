@@ -4,7 +4,7 @@
 
 The project will remain open source, and the hope is that fellow comrade XMPP providers will host this client alongside the many free (or even paid 🤷‍♂️) servers.
 
-All this... until the direly needed job takes the dev guy away. Then — who knows? Maybe something miraculous will happen, and Najva will survive to live a long, fulfilling life.  
+All this... until the direly needed job takes away the dev guy. Then — who knows? Maybe something miraculous will happen, and Najva will survive to live a long, fulfilling life.  
 Or, may dear Najva rest in peace. 🪦
 
 ---
@@ -15,25 +15,25 @@ Or, may dear Najva rest in peace. 🪦
 
 This is a [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/) project with:
 
-- ❌ No Ecto  
-- ❌ No database  
-- ❌ No permanent storage (except browser-based options like cookies or localStorage for user preferences)
+-  No Ecto  
+-  No database  
+-  No permanent storage (except browser-based options like cookies or localStorage for user preferences)
 
-It uses the [ProcessOne XMPP library](https://github.com/processone/ejabberd) for Erlang/Elixir.
+It uses the [ProcessOne XMPP library](https://github.com/processone/xmpp) for Erlang/Elixir.
 
 🎯 **Current goal:**  
 Just make it functional enough to *send and receive any message at all*.
+
+---
 
 ## 🛠️ Installation
 
 ### Prerequisites
 
-- [Elixir](https://elixir-lang.org/install.html)
-- [Erlang](https://www.erlang.org/downloads)
+- Elixir
+- Erlang
 
 Make sure both are installed and available in your system's PATH.
-
----
 
 ### Steps
 
