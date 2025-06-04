@@ -17,7 +17,8 @@ defmodule ProjectNajvaWeb.Router do
   scope "/", ProjectNajvaWeb do
     pipe_through :browser
 
-    live "/", AppLive.Home, :index
+    live "/", AppLive.Root, :root
+    live "/home", AppLive.Home, :index
 
     live "/login", AuthLive.Login, :new
     live "/register", AuthLive.Register, :new

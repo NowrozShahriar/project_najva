@@ -1,4 +1,4 @@
-defmodule ProjectNajvaWeb.AppLive.Home do
+defmodule ProjectNajvaWeb.AppLive.Root do
   use ProjectNajvaWeb, :live_view
 
   def mount(params, session, socket) do
@@ -8,11 +8,11 @@ defmodule ProjectNajvaWeb.AppLive.Home do
 
   def render(assigns) do
     ~H"""
-    <div class="text-white">
-      <h1>Home</h1>
+    <div class="chat-root text-white">
+      <h1>Root</h1>
       <p>Check the console for debug information.</p>
     </div>
-    <ProjectNajvaWeb.Components.visibility hide_class="listpane" />
+    <ProjectNajvaWeb.Components.visibility hide_class="chat-root" />
     """
   end
 end

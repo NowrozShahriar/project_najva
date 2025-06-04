@@ -47,16 +47,13 @@
   </nav>
   
 <!-- ListPane -->
-  <div class="listpane h-full min-w-72 bg-bg-primary p-1 sm:m-0.5 sm:h-auto sm:rounded-lg xl:w-80 2xl:w-96">
+  <div class="listpane h-full min-w-72 bg-bg-primary p-1 sm:m-0.5 sm:h-auto sm:rounded-lg xl:min-w-80 2xl:min-w-96">
     <h1 class="m-1 text-3xl font-semibold text-text-secondary">Project Najva</h1>
   </div>
   
 <!-- MainPanel -->
-  <div class="h-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto w-96 sm:rounded-lg">
-    <.flash_group flash={@flash} />
-    {@inner_content}
-  </div>
-  <div class="h-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto w-96 sm:rounded-lg">
+  <div class="h-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto w-full sm:rounded-lg"
+  >
     <.flash_group flash={@flash} />
     {@inner_content}
   </div>
