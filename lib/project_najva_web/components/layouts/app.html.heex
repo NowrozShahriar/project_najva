@@ -52,8 +52,11 @@
   </div>
   
 <!-- MainPanel -->
-  <div class="h-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto w-full sm:rounded-lg"
-  >
+  <div class={
+    if assigns[:live_action] == :root,
+      do: "h-auto w-full bg-bg-primary sm:m-0.5 sm:rounded-lg",
+      else: "h-full w-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto sm:rounded-lg"
+  }>
     <.flash_group flash={@flash} />
     {@inner_content}
   </div>

@@ -8,10 +8,7 @@ defmodule ProjectNajvaWeb.AppLive.Root do
 
   def render(assigns) do
     ~H"""
-    <div class="chat-root text-white">
-      <h1>Root</h1>
-      <p>Check the console for debug information.</p>
-    </div>
+    <div class="chat-root text-white m-1" />
     <ProjectNajvaWeb.Components.visibility hide_class="chat-root" />
     """
   end
