@@ -8,7 +8,7 @@ defmodule ProjectNajvaWeb.AppLive.Home do
 
   def render(assigns) do
     ~H"""
-      <div class="">
+      <div class="w-96">
         <h1>Home</h1>
         <p>Check the console for debug information.</p>
       </div>
