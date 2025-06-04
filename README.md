@@ -7,7 +7,6 @@ The project will remain open source, and the hope is that fellow comrade XMPP pr
 All this... until the direly needed job takes away the dev guy. Then — who knows? Maybe something miraculous will happen, and Najva will survive to live a long, fulfilling life.  
 Or, may dear Najva rest in peace. 🪦
 
----
 
 ## 🚧 Current State
 
@@ -15,14 +14,20 @@ Or, may dear Najva rest in peace. 🪦
 
 This is a [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/) project with:
 
--  No Ecto  
--  No database  
--  No permanent storage (except browser-based options like cookies or localStorage for user preferences)
+-  NO PAGE RELOAD — Complete LiveView
+-  No Database — Only Cookies and Browser Storages
 
-It uses the [ProcessOne XMPP library](https://github.com/processone/xmpp) for Erlang/Elixir.
+The library used is [ProcessOne XMPP library](https://github.com/processone/xmpp) for Erlang/Elixir.
+
+---
 
 🎯 **Current goal:**  
 Just make it functional enough to *send and receive any message at all*.
+
+First Look:
+![mobile](./readme_media/screenshot_mobile_chrome.png)
+![fullscreen](./readme_media/screenshot_fullscreen.png)
+![resized](./readme_media/screenshot_resized.png)
 
 ---
 
