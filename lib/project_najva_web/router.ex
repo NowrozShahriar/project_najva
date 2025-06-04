@@ -17,8 +17,12 @@ defmodule ProjectNajvaWeb.Router do
   scope "/", ProjectNajvaWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
-    post "/login", AuthController, :set_token
+    live "/", AppLive.Home, :index
+
+    live "/login", AuthLive.Login, :new
+    live "/register", AuthLive.Register, :new
+    post "/login", AuthController, :login
+    post "/register", AuthController, :register
   end
 
   # Other scopes may use custom stacks.

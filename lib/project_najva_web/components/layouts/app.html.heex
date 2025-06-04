@@ -1,56 +1,56 @@
 <main class="mx-auto flex h-dvh max-w-screen-2xl flex-col-reverse bg-bg-secondary sm:flex-row sm:p-0.5">
   
 <!-- Navigation bar: vertical on desktop, horizontal on mobile -->
-  <nav class="mt-0.5 flex justify-evenly bg-bg-primary p-0.5 sm:m-0.5 sm:w-14 sm:flex-col sm:justify-normal sm:rounded-lg">
+  <nav class="mt-0.5 flex justify-evenly bg-bg-primary p-0.5 sm:m-0.5 sm:flex-col sm:justify-normal sm:rounded-lg">
     
 <!-- Account link -->
-    <.link navigate="" title="Account" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
+    <.link navigate="/login" title="Account" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
       <.icon name="hero-user-circle" class="size-full bg-fg-primary hover:bg-black" />
     </.link>
     
 <!-- Chats link -->
-    <.link patch="" title="Chats" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
+    <button phx-click="" title="Chats" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
       <.icon
         name="hero-chat-bubble-oval-left-ellipsis"
         class="size-full bg-fg-primary hover:bg-black"
       />
-    </.link>
+    </button>
     
 <!-- Groups link (currently commented out) -->
-    <!-- <.link patch="" title="Groups" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
+    <!-- <button phx-click="" title="Groups" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
       <.icon name="hero-user-group" class="size-full bg-fg-primary hover:bg-black" />
-    </.link> -->
+    </button> -->
 
-<!-- Favourites link -->
-    <.link patch="" title="Favourites" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
+<!-- Favorites link -->
+    <button phx-click="" title="Favorites" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
       <.icon name="hero-heart" class="size-full bg-fg-primary hover:bg-black" />
-    </.link>
+    </button>
     
 <!-- Archive link (only visible on desktop) -->
-    <.link
-      patch=""
+    <button
+      phx-click=""
       title="Archive"
       class="hidden sm:block m-0.5 size-12 rounded-xl bg-bg-primary p-1"
     >
       <.icon name="hero-inbox-stack" class="size-full bg-fg-primary hover:bg-black" />
-    </.link>
+    </button>
     
 <!-- Contacts link -->
-    <.link patch="" title="Contacts" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
+    <button phx-click="" title="Contacts" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
       <.icon name="hero-bookmark-square" class="size-full bg-fg-primary hover:bg-black" />
-    </.link>
+    </button>
     
 <!-- Settings link -->
-    <.link patch="" title="Settings" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
+    <.link navigate="" title="Settings" class="m-0.5 size-12 rounded-xl bg-bg-primary p-1">
       <.icon name="hero-cog-6-tooth" class="size-full bg-fg-primary hover:bg-black" />
     </.link>
   </nav>
 
-  <div class="listpane h-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto sm:w-96 sm:rounded-lg">
+  <div class="listpane h-full min-w-72 bg-bg-primary p-1 sm:m-0.5 sm:h-auto sm:rounded-lg xl:w-96">
     <h1 class="m-1 text-3xl font-semibold text-text-secondary">Project Najva</h1>
   </div>
 
-  <div>
+  <div class="h-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto w-full sm:rounded-lg">
     <.flash_group flash={@flash} />
     {@inner_content}
   </div>
