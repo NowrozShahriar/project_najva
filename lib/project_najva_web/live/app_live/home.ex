@@ -9,7 +9,7 @@ defmodule ProjectNajvaWeb.AppLive.Home do
   def render(assigns) do
     ~H"""
     <div class="text-white">
-      <h1>Home</h1>
+      <.link navigate="/">Home</.link>
       <p>Check the console for debug information.</p>
     </div>
     <ProjectNajvaWeb.Components.visibility hide_class="listpane" />
