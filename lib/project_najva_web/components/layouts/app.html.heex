@@ -47,14 +47,19 @@
   </nav>
   
 <!-- ListPane -->
-  <div class="listpane h-full min-w-72 bg-bg-primary p-1 sm:m-0.5 sm:h-auto sm:rounded-lg xl:min-w-80 2xl:min-w-96">
-    <h1 class="m-1 text-3xl font-semibold text-text-secondary">Project Najva</h1>
+  <div class={if assigns[:live_action] == :root, do: "listpane h-full w-full bg-bg-primary p-2 sm:m-0.5 sm:h-auto sm:rounded-lg md:min-w-80 md:max-w-96 2xl:min-w-96", else: "listpane h-full min-w-72 bg-bg-primary p-2 sm:m-0.5 sm:h-auto sm:rounded-lg xl:min-w-80 2xl:min-w-96"}>
+    <h1 class="px-3 pt-4 pb-5 text-3xl font-semibold text-text-secondary">Project Najva</h1>
+    <input
+      type="text"
+      placeholder="Search... (doesn't work yet)"
+      class="w-full rounded-full bg-bg-secondary px-4 py-2 text-text-primary border-none focus:ring-2 focus:ring-fg-primary"
+    />
   </div>
   
 <!-- MainPanel -->
   <div class={
     if assigns[:live_action] == :root,
-      do: "h-auto w-full bg-bg-primary sm:m-0.5 sm:rounded-lg",
+      do: "hidden md:block h-auto w-full bg-bg-primary sm:m-0.5 sm:rounded-lg",
       else: "h-full w-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto sm:rounded-lg"
   }>
     <.flash_group flash={@flash} />
