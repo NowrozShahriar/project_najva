@@ -10,15 +10,15 @@ navpanel_child = "m-0.5 size-12 rounded-xl bg-bg-primary p-1"
 navpanel_icon = "size-full bg-fg-primary hover:bg-black"
 
 listpane =
-  "h-full min-w-72 bg-bg-primary p-2 sm:m-0.5 sm:h-auto sm:rounded-lg xl:min-w-80 2xl:min-w-96"
+  "listpane h-full min-w-72 bg-bg-primary p-2 sm:m-0.5 sm:h-auto sm:rounded-lg xl:min-w-80 2xl:min-w-96"
 
 listpane_root =
   "h-full w-full bg-bg-primary p-2 sm:m-0.5 sm:h-auto sm:rounded-lg md:min-w-80 md:max-w-96 2xl:min-w-96"
 
-title = "px-3 pt-4 pb-5 text-3xl font-semibold text-text-secondary"
+title = "px-3 pt-4 pb-5 text-3xl font-semibold text-text-primary"
 
 search_field =
-  "w-full rounded-full border-none bg-bg-secondary px-4 py-2 text-text-primary focus:ring-2 focus:ring-fg-primary"
+  "w-full rounded-full border-none bg-bg-secondary px-4 py-2 text-text-primary placeholder-text-inert focus:ring-2 focus:ring-fg-primary"
 
 mainpanel = "h-full w-full bg-bg-primary p-1 sm:m-0.5 sm:h-auto sm:rounded-lg"
 
@@ -66,13 +66,13 @@ mainpanel_root = "hidden h-auto w-full bg-bg-primary sm:m-0.5 sm:rounded-lg md:b
   </nav>
   
 <!-- ListPane -->
-  <div class={if @live_action == :root, do: listpane_root, else: listpane}>
+  <div class={if @live_action != :root, do: listpane, else: listpane_root}>
     <h1 class={title}>Project Najva</h1>
-    <input type="text" placeholder="Search... (doesn't work yet)" class={search_field} />
+    <input type="text" placeholder="Search..." class={search_field} />
   </div>
   
 <!-- MainPanel -->
-  <div class={if @live_action == :root, do: mainpanel_root, else: mainpanel}>
+  <div class={if @live_action != :root, do: mainpanel, else: mainpanel_root}>
     <.flash_group flash={@flash} />
     {@inner_content}
   </div>

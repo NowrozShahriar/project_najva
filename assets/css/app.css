@@ -8,34 +8,37 @@
     --color-bg-primary: #262626;
     --color-bg-secondary: #404040;
     --color-fg-primary: #757575;
-    --color-text-primary: #f5f5f5;
-    --color-text-secondary: #cecece;
+    --color-text-highlight: #f5f5f5;
+    --color-text-primary: #cecece;
+    --color-text-inert: #949494;
 }
 
 /* Override if system prefers light theme */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         --color-bg-primary: #fafafa;
         --color-bg-secondary: #d2d3db;
         --color-fg-primary: #757575;
         --color-text-primary: #262626;
         --color-text-secondary: #404040;
+
     }
-}
+} */
 
 /* Manual override with class */
-.light {
+/* .light {
     --color-bg-primary: #fafafa;
     --color-bg-secondary: #d2d3db;
     --color-fg-primary: #757575;
     --color-text-primary: #262626;
     --color-text-secondary: #404040;
-}
+} */
 
 .dark {
     --color-bg-primary: #262626;
     --color-bg-secondary: #404040;
-    --color-fg-primary: #f5f5f5;
-    --color-text-primary: #f5f5f5;
-    --color-text-secondary: #cecece;
+    --color-fg-primary: #757575;
+    --color-text-highlight: #f5f5f5;
+    --color-text-primary: #cecece;
+    --color-text-inert: #949494;
 }

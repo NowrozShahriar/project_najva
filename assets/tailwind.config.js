@@ -18,8 +18,9 @@ module.exports = {
         'bg-primary': 'var(--color-bg-primary)',
         'bg-secondary': 'var(--color-bg-secondary)',
         'fg-primary': 'var(--color-fg-primary)',
+        'text-highlight': 'var(--color-text-highlight)',
         'text-primary': 'var(--color-text-primary)',
-        'text-secondary': 'var(--color-text-secondary)'
+        'text-inert': 'var(--color-text-inert)'
       }
     },
   },
