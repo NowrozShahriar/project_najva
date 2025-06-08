@@ -1,8 +1,7 @@
 defmodule ProjectNajvaWeb.AppLive.Home do
   use ProjectNajvaWeb, :live_view
 
-  def mount(params, session, socket) do
-    dbg()
+  def mount(_params, _session, socket) do
     {:ok, socket}
   end
 

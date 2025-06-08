@@ -20,8 +20,8 @@ defmodule ProjectNajvaWeb.Router do
     live "/", AppLive.Root, :root
     live "/home", AppLive.Home, :index
 
-    live "/login", AuthLive.Login, :new
-    live "/register", AuthLive.Register, :new
+    live "/login", AuthLive, :login
+    live "/register", AuthLive, :register
     post "/login", AuthController, :login
     post "/register", AuthController, :register
   end
