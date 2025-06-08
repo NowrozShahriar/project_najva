@@ -7,7 +7,7 @@ defmodule ProjectNajvaWeb.AppLive.Root do
 
   def render(assigns) do
     ~H"""
-    <div class="chat-root text-white m-1" />
+    <div class="chat-root m-1 text-white" />
     """
   end
 end

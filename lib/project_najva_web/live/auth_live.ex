@@ -11,18 +11,18 @@ defmodule ProjectNajvaWeb.AuthLive do
     body = "flex h-dvh items-center justify-center bg-bg-secondary"
 
     container =
-      "flex flex-col md:flex-row items-center lg:space-x-24 md:justify-evenly lg:justify-center w-full p-8 shadow-lg bg-bg-primary"
+      "flex w-full flex-col items-center bg-bg-primary p-8 shadow-lg md:flex-row md:justify-evenly lg:justify-center lg:space-x-24"
 
-    branding = "mb-4 md:mb-10 text-center md:text-5xl text-4xl font-bold text-text-primary"
+    branding = "mb-4 text-center text-4xl font-bold text-text-primary md:mb-10 md:text-5xl"
 
-    form = "flex flex-col items-center w-full max-w-80"
+    form = "flex w-full max-w-80 flex-col items-center"
 
     input =
-      "my-2 px-3 py-2 w-full rounded-xl border-none bg-bg-secondary text-text-primary focus:ring-2 focus:ring-fg-primary placeholder-text-inert"
+      "my-2 w-full rounded-xl border-none bg-bg-secondary px-3 py-2 text-text-primary placeholder-text-inert focus:ring-2 focus:ring-fg-primary"
 
-    action_div = "flex flex-col items-center w-full"
+    action_div = "flex w-full flex-col items-center"
 
-    button = "mt-4 w-3/4 rounded-xl p-1.5 text-lg font-bold text-text-primary bg-bg-secondary"
+    button = "mt-4 w-3/4 rounded-xl bg-bg-secondary p-1.5 text-lg font-bold text-text-primary"
 
     link = "mt-2 text-text-inert underline" %>
 
@@ -31,8 +31,8 @@ defmodule ProjectNajvaWeb.AuthLive do
       <div class={container}>
         <.link navigate="/" class={branding}>Project Najva</.link>
         <.form for={%{}} phx-submit={@live_action} class={form}>
-            <input type="email" name="jid" placeholder="XMPP Address" required class={input} />
-            <input type="password" name="password" placeholder="Password" required class={input} />
+          <input type="email" name="jid" placeholder="XMPP Address" required class={input} />
+          <input type="password" name="password" placeholder="Password" required class={input} />
           <div :if={@live_action == :login} class={action_div}>
             <button class={button}>Login</button>
             <.link navigate="/register" class={link}>Create new account.</.link>
