@@ -20,16 +20,16 @@ defmodule ProjectNajvaWeb.Router do
     live "/", AppLive.Root, :root
     live "/home", AppLive.Home, :index
 
-    live "/login", AuthLive, :login
-    live "/register", AuthLive, :register
+    get "/login", AuthController, :auth
+    get "/register", AuthController, :auth
+  end
+
+  scope "/", ProjectNajvaWeb do
+    pipe_through :api
+
     post "/login", AuthController, :login
     post "/register", AuthController, :register
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", ProjectNajvaWeb do
-  #   pipe_through :api
-  # end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:project_najva, :dev_routes) do

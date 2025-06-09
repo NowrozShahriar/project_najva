@@ -1,17 +1,16 @@
-defmodule ProjectNajvaWeb.AuthLive do
-  use ProjectNajvaWeb, :live_view
+defmodule ProjectNajvaWeb.AuthHTML do
+  use ProjectNajvaWeb, :html
 
-  def mount(_params, _session, socket) do
-    {:ok, socket, layout: false}
-  end
+  def auth(assigns) do
 
-  def render(assigns) do
+    dbg(assigns.current_path)
     ~H"""
+    <.flash_group flash={@flash} />
     <% # CSS Classes
     body = "flex h-dvh items-center justify-center bg-bg-secondary"
 
     container =
-      "flex w-full flex-col items-center bg-bg-primary p-8 shadow-lg md:flex-row md:justify-evenly lg:justify-center lg:space-x-24"
+      "flex w-full flex-col items-center bg-bg-primary p-8 shadow-lg md:flex-row md:justify-evenly lg:justify-center lg:space-x-32"
 
     branding = "mb-4 text-center text-4xl font-bold text-text-primary md:mb-10 md:text-5xl"
 
@@ -22,23 +21,23 @@ defmodule ProjectNajvaWeb.AuthLive do
 
     action_div = "flex w-full flex-col items-center"
 
-    button = "mt-4 w-3/4 rounded-xl bg-bg-secondary p-1.5 text-lg font-bold text-text-primary"
+    button =
+      "disabled:text-text-inert mt-4 w-3/4 rounded-xl bg-bg-secondary p-1.5 text-lg font-bold text-text-primary"
 
     link = "mt-2 text-text-inert underline" %>
 
-    <.flash_group flash={@flash} />
     <div class={body}>
       <div class={container}>
         <.link navigate="/" class={branding}>Project Najva</.link>
-        <.form for={%{}} phx-submit={@live_action} class={form}>
+        <.form for={%{}} phx-submit={@current_path} class={form}>
           <input type="email" name="jid" placeholder="XMPP Address" required class={input} />
           <input type="password" name="password" placeholder="Password" required class={input} />
-          <div :if={@live_action == :login} class={action_div}>
-            <button class={button}>Login</button>
-            <.link navigate="/register" class={link}>Create new account.</.link>
+          <div :if={@current_path == "/login"} class={action_div}>
+            <button phx-disable-with="Logging in..." class={button}>Login</button>
+            <%!-- <.link navigate="/register" class={link}>Create new account.</.link> --%>
           </div>
-          <div :if={@live_action == :register} class={action_div}>
-            <button class={button}>Register</button>
+          <div :if={@current_path == "/register"} class={action_div}>
+            <button disabled class={button}>Register</button>
             <.link navigate="/login" class={link}>Log in to existing account.</.link>
           </div>
         </.form>
