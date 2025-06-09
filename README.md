@@ -24,10 +24,11 @@ The library used is [ProcessOne XMPP library](https://github.com/processone/xmpp
 🎯 **Current goal:**  
 Just make it functional enough to *send and receive any message at all*.
 
-First Look:
-![mobile](./readme_media/screenshot_mobile_chrome.png)
-![fullscreen](./readme_media/screenshot_fullscreen.png)
-![resized](./readme_media/screenshot_resized.png)
+**First Look:**
+
+![desktop](./readme_media/screenshot_desktop_chromium.jpeg)
+![mobile](./readme_media/screenshot_mobile_chrome.jpeg)
+![fullscreen](./readme_media/screenshot_fullscreen.jpeg)
 
 ---
 
