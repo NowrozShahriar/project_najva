@@ -12,19 +12,22 @@ Or, may dear Najva rest in peace. 🪦
 
 ⚠️ *Still in early development / pre-alpha.*
 
-This is a [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/) project with:
+-  Just made sure the UI appears perfect on mobile to desktop, and everything in between.
 
--  NO PAGE RELOAD — Complete LiveView
--  No Database — Only Cookies and Browser Storages
-
-The library used is [ProcessOne XMPP library](https://github.com/processone/xmpp) for Erlang/Elixir.
+This is a [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/) project with *no database*. The library used is [ProcessOne XMPP library](https://github.com/processone/xmpp) for Erlang/Elixir.
 
 ---
 
-🎯 **Current goal:**  
-Just make it functional enough to *send and receive any message at all*.
+🎯 **Current Roadmap:**  
+- Integrate login and display chat list.
+- Display previous clean-text chats properly.
+- Send clean-text messages.
+- Add OMEMO, to enable secure chats.
+- Implement presence.
+- Then... *let's come to this point first.*
 
-**First Look:**
+
+### **First Look:**
 
 ![desktop](./readme_media/screenshot_desktop_chromium.jpeg)
 ![mobile](./readme_media/screenshot_mobile_chrome.jpeg)
