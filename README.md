@@ -24,7 +24,6 @@ This is a [Phoenix LiveView](https://hexdocs.pm/phoenix_live_view/) project with
 - Send clean-text messages.
 - Add OMEMO, to enable secure chats.
 - Implement presence.
-- Then... *let's come to this point first.*
 
 
 ### **First Look:**
