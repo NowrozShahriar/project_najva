@@ -8,8 +8,8 @@ const path = require("path")
 module.exports = {
   content: [
     "./js/**/*.js",
-    "../lib/project_najva_web.ex",
-    "../lib/project_najva_web/**/*.*ex"
+    "../lib/najva_web.ex",
+    "../lib/najva_web/**/*.*ex"
   ],
   theme: {
     extend: {

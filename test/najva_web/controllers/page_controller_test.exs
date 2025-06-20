@@ -1,5 +1,5 @@
-defmodule ProjectNajvaWeb.PageControllerTest do
-  use ProjectNajvaWeb.ConnCase
+defmodule NajvaWeb.PageControllerTest do
+  use NajvaWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

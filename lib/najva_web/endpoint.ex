@@ -1,12 +1,12 @@
-defmodule ProjectNajvaWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :project_najva
+defmodule NajvaWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :najva
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_project_najva_key",
+    key: "_najva_key",
     signing_salt: "NrQYYLe6",
     same_site: "Lax"
   ]
@@ -21,9 +21,9 @@ defmodule ProjectNajvaWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :project_najva,
+    from: :najva,
     gzip: false,
-    only: ProjectNajvaWeb.static_paths()
+    only: NajvaWeb.static_paths()
 
   # Enable Tidewave if the module is available
   if Code.ensure_loaded?(Tidewave) do
@@ -53,5 +53,5 @@ defmodule ProjectNajvaWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug ProjectNajvaWeb.Router
+  plug NajvaWeb.Router
 end

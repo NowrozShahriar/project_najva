@@ -1,12 +1,12 @@
-defmodule ProjectNajvaWeb do
+defmodule NajvaWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use ProjectNajvaWeb, :controller
-      use ProjectNajvaWeb, :html
+      use NajvaWeb, :controller
+      use NajvaWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -40,9 +40,9 @@ defmodule ProjectNajvaWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: ProjectNajvaWeb.Layouts]
+        layouts: [html: NajvaWeb.Layouts]
 
-      use Gettext, backend: ProjectNajvaWeb.Gettext
+      use Gettext, backend: NajvaWeb.Gettext
 
       import Plug.Conn
 
@@ -53,7 +53,7 @@ defmodule ProjectNajvaWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {ProjectNajvaWeb.Layouts, :app}
+        layout: {NajvaWeb.Layouts, :app}
 
       unquote(html_helpers())
     end
@@ -83,12 +83,12 @@ defmodule ProjectNajvaWeb do
   defp html_helpers do
     quote do
       # Translation
-      use Gettext, backend: ProjectNajvaWeb.Gettext
+      use Gettext, backend: NajvaWeb.Gettext
 
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components
-      import ProjectNajvaWeb.CoreComponents
+      import NajvaWeb.CoreComponents
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
@@ -101,9 +101,9 @@ defmodule ProjectNajvaWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: ProjectNajvaWeb.Endpoint,
-        router: ProjectNajvaWeb.Router,
-        statics: ProjectNajvaWeb.static_paths()
+        endpoint: NajvaWeb.Endpoint,
+        router: NajvaWeb.Router,
+        statics: NajvaWeb.static_paths()
     end
   end
 

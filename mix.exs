@@ -1,9 +1,9 @@
-defmodule ProjectNajva.MixProject do
+defmodule Najva.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :project_najva,
+      app: :najva,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule ProjectNajva.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {ProjectNajva.Application, []},
+      mod: {Najva.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -70,10 +70,10 @@ defmodule ProjectNajva.MixProject do
     [
       setup: ["deps.get", "assets.setup", "assets.build"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind project_najva", "esbuild project_najva"],
+      "assets.build": ["tailwind najva", "esbuild najva"],
       "assets.deploy": [
-        "tailwind project_najva --minify",
-        "esbuild project_najva --minify",
+        "tailwind najva --minify",
+        "esbuild najva --minify",
         "phx.digest"
       ]
     ]

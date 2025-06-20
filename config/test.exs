@@ -2,13 +2,13 @@ import Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :project_najva, ProjectNajvaWeb.Endpoint,
+config :najva, NajvaWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "mbLXnrFGbNAMcjX7Muxmnuxyey5gdVuWKIye+5R2Uqdt862YxQ4J70KWjiXt2/7G",
   server: false
 
 # In test we don't send emails
-config :project_najva, ProjectNajva.Mailer, adapter: Swoosh.Adapters.Test
+config :najva, Najva.Mailer, adapter: Swoosh.Adapters.Test
 
 # Disable swoosh api client as it is only required for production adapters
 config :swoosh, :api_client, false

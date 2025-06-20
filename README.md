@@ -1,4 +1,4 @@
-# Project Najva
+# Najva
 
 **Najva** aims to become *the go-to web client for XMPP*, spreading the light of security and freedom by making XMPP more accessible — and actually usable in everyday life.
 

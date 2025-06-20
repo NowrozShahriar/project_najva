@@ -1,5 +1,5 @@
-defmodule ProjectNajvaWeb.AppLive.Root do
-  use ProjectNajvaWeb, :live_view
+defmodule NajvaWeb.AppLive.Root do
+  use NajvaWeb, :live_view
 
   def mount(_params, _session, socket) do
     {:ok, socket}

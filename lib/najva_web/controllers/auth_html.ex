@@ -1,9 +1,7 @@
-defmodule ProjectNajvaWeb.AuthHTML do
-  use ProjectNajvaWeb, :html
+defmodule NajvaWeb.AuthHTML do
+  use NajvaWeb, :html
 
   def auth(assigns) do
-
-    dbg(assigns.current_path)
     ~H"""
     <.flash_group flash={@flash} />
     <% # CSS Classes
@@ -12,7 +10,7 @@ defmodule ProjectNajvaWeb.AuthHTML do
     container =
       "flex w-full flex-col items-center bg-bg-primary p-8 shadow-lg md:flex-row md:justify-evenly lg:justify-center lg:space-x-32"
 
-    branding = "mb-4 text-center text-4xl font-bold text-text-primary md:mb-10 md:text-5xl"
+    branding = "mb-4 text-center text-4xl font-bold text-text-primary md:text-5xl"
 
     form = "flex w-full max-w-80 flex-col items-center"
 
@@ -28,7 +26,7 @@ defmodule ProjectNajvaWeb.AuthHTML do
 
     <div class={body}>
       <div class={container}>
-        <.link navigate="/" class={branding}>Project Najva</.link>
+        <a href="/" class={branding}>Welcome to Najva</a>
         <.form for={%{}} phx-submit={@current_path} class={form}>
           <input type="email" name="jid" placeholder="XMPP Address" required class={input} />
           <input type="password" name="password" placeholder="Password" required class={input} />

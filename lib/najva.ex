@@ -1,6 +1,6 @@
-defmodule ProjectNajva do
+defmodule Najva do
   @moduledoc """
-  ProjectNajva keeps the contexts that define your domain
+  Najva keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

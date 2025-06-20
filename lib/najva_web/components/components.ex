@@ -1,4 +1,4 @@
-defmodule ProjectNajvaWeb.Components do
+defmodule NajvaWeb.Components do
   use Phoenix.Component
 
   # This component is used to hide the list pane on small screens.

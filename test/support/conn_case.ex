@@ -1,4 +1,4 @@
-defmodule ProjectNajvaWeb.ConnCase do
+defmodule NajvaWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule ProjectNajvaWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use ProjectNajvaWeb.ConnCase, async: true`, although
+  by setting `use NajvaWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -20,14 +20,14 @@ defmodule ProjectNajvaWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint ProjectNajvaWeb.Endpoint
+      @endpoint NajvaWeb.Endpoint
 
-      use ProjectNajvaWeb, :verified_routes
+      use NajvaWeb, :verified_routes
 
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import ProjectNajvaWeb.ConnCase
+      import NajvaWeb.ConnCase
     end
   end
 

@@ -1,5 +1,5 @@
-defmodule ProjectNajvaWeb.AppLive.Home do
-  use ProjectNajvaWeb, :live_view
+defmodule NajvaWeb.AppLive.Home do
+  use NajvaWeb, :live_view
 
   def mount(_params, _session, socket) do
     {:ok, socket}
@@ -11,7 +11,7 @@ defmodule ProjectNajvaWeb.AppLive.Home do
       <.link navigate="/">Home</.link>
       <p>Check the console for debug information.</p>
     </div>
-    <ProjectNajvaWeb.Components.visibility hide_class="listpane" />
+    <NajvaWeb.Components.visibility hide_class="listpane" />
     """
   end
 end
